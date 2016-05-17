@@ -2,6 +2,15 @@
 
 Control a RGB LED strip over the network using an esp8266 and UDP!
 
+## Technical
+
+This program lets you control the colors on a ws2812b LED strip in an extremely
+simple way. It runs a UDP server listening on port 80 (configurable in `config.lua`).
+A UDP packet sent to it must contain red, green and blue values ranging from 0
+to 255, repeated in sequence for every LED you want to color.
+For example: if your strip has 50 LED's, you want to send 50 * 3 = 150 bytes
+to color all of them.
+
 ## Installation
 
 Grab Nodemcu firmware release 0.9.6-dev or later [from GitHub](https://github.com/nodemcu/nodemcu-firmware/releases). Flash it to your microcontroller using [esptool](https://github.com/themadinventor/esptool) or a similar program:
