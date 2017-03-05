@@ -13,5 +13,5 @@ end)
 -- Clear the strip (write all black pixels to it once)
 ws2812.write(pin, string.char(0,  0,  0):rep(pixels))
 
-srv:listen(80)
+srv:listen(port)
 print("LED server running!")
